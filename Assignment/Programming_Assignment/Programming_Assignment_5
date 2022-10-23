@@ -1,0 +1,26 @@
+#1. Write a Python Program to Find LCM?
+
+factor = list()
+numbers = list()
+factor_1 = list()
+for _ in range(int(input())):
+        numbers.append(int(input()))
+for i in range(0,len(numbers)):
+  factor_1 = list()
+  for j in range(1,51):
+    factor_1.append(numbers[i]*j)
+  factor.append(factor_1)
+factor
+common_factor = list()
+
+for item in factor[0]:
+  common = 0
+  for i in range(1,len(factor)):
+    for j in range(0,50):
+      if item == factor[i][j]:
+        common = common+1
+
+  if common == len(factor)-1:
+    common_factor.append(item)
+
+common_factor
