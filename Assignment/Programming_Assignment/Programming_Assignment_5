@@ -155,3 +155,42 @@ for i in lst:
 
 _char = int(input("Enter the character to get ASCII value  "))
 print(f"The ASCII value of {_char} is {ord(_char)}")
+
+
+#5. Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations?
+
+def _sum(numb):
+  total = 0
+  for item in numb:
+    total = total + item
+  return total
+
+def _multiply(numb):
+  total = 1
+  for item in numb:
+    total = total*item
+  return total
+
+def _Calci():
+  numbers = list()
+  opt = input("what do you want to do add,subtract,multiply or divide ")
+  if opt == "add":
+    for i in range(int(input("How many numbers do you want to add "))):
+      numbers.append(int(input(f"please enter number_{i+1} ")))
+    print(f"sum of {numbers} is {_sum(numbers)}")
+  elif opt == "subtract":
+    mumb_1 = int(input("Please enter first number "))
+    mumb_2 = int(input("Please enter second number "))
+    print(f"Result of {mumb_1} - {mumb_2} is {mumb_1 - mumb_2}")
+  elif opt == "divide":
+    mumb_1 = int(input("Please enter first number "))
+    mumb_2 = int(input("Please enter second number "))
+    print(f"Result of {mumb_1} / {mumb_2} is {mumb_1 / mumb_2}")
+  elif opt == "multiply":
+    for i in range(int(input("How many numbers do you want to multiply "))):
+      numbers.append(int(input(f"please enter number_{i+1} ")))
+    print(f"Multiplication of {numbers} is {_multiply(numbers)}")
+  else:
+    print("Invalid operation")
+
+_Calci()
